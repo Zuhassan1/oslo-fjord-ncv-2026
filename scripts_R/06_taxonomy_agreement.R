@@ -84,6 +84,6 @@ ggsave("Figure6_taxonomy_agreement.png", plot = p_agree, width = 8, height = 6, 
 
 write.csv(
   comparison %>% select(candidate, tigtog_order, gvclass_order, gvclass_order_raw, gvclass_majority_raw, agreement) %>% arrange(agreement, candidate),
-  "Table_taxonomy_comparison_detail_CORRECTED.csv", row.names = FALSE
+  "Table_taxonomy_comparison_detail.csv", row.names = FALSE
 )
 message("\nDone. Compare against the original Figure 6 (15 Agree / 2 no-signal / 1 non-NCLDV / 8 Disagree).")
