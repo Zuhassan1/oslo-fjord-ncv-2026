@@ -79,8 +79,8 @@ p_agree <- ggplot(summary_counts, aes(x = agreement, y = n, fill = agreement)) +
   theme(plot.title = element_text(size = 12, face = "bold"),
         axis.text.x = element_text(angle = 20, hjust = 1))
 
-ggsave("Figure6_taxonomy_agreement_CORRECTED.pdf", plot = p_agree, width = 8, height = 6, dpi = 300)
-ggsave("Figure6_taxonomy_agreement_CORRECTED.png", plot = p_agree, width = 8, height = 6, dpi = 300)
+ggsave("Figure6_taxonomy_agreement.pdf", plot = p_agree, width = 8, height = 6, dpi = 300)
+ggsave("Figure6_taxonomy_agreement.png", plot = p_agree, width = 8, height = 6, dpi = 300)
 
 write.csv(
   comparison %>% select(candidate, tigtog_order, gvclass_order, gvclass_order_raw, gvclass_majority_raw, agreement) %>% arrange(agreement, candidate),
